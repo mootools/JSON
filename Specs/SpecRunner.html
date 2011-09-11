@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>JSON Specs</title>
+
+	<link rel="stylesheet" type="text/css" href="jasmine/jasmine.css">
+	<script src="jasmine/jasmine.js"></script>
+	<script src="jasmine/jasmine-html.js"></script>
+
+	<script src="require.js"></script>
+
+	<script type="text/javascript">
+
+	require({
+		paths: {
+			'Test': 'spec',
+			'Base': '../../Base/Source',
+			'JSON': '../Source'
+		},
+		ready: function(){
+			require([
+				'Test/JSON'
+			], function(){
+				jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+				jasmine.getEnv().execute();
+			});
+		}
+	});
+	</script>
+
+</head>
+
+<body>
+</body>
+</html>
